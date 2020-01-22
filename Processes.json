@@ -1,0 +1,1329 @@
+{
+    "Desk": [
+        {
+            "Name": "FundOver",
+            "Process": [
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Processes\\",
+                    "Name": "ScheduleManualUpdate",
+                    "Hour": 25,
+                    "Inputs": [],
+                    "RelativeDayStr": "SD",
+                    "Frequency": null,
+                    "Continuous": false,
+                    "Language": "Python"
+                },
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Processes\\",
+                    "Name": "SCDHoldingRec",
+                    "Hour": 0,
+                    "Inputs": [
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Scheduler\\",
+                            "Name": "SCDPrice",
+                            "SaveTime": null,
+                            "Format": "json",
+                            "Date": "LBD"
+                        }
+                    ],
+                    "RelativeDayStr": "LBD",
+                    "Frequency": null,
+                    "Continuous": true,
+                    "Language": "Python"
+                },
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Processes\\",
+                    "Name": "ProductionSchedule",
+                    "Hour": 25,
+                    "Inputs": [],
+                    "RelativeDayStr": "OriginMonth",
+                    "Frequency": null,
+                    "Continuous": false,
+                    "Language": "Python"
+                },
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Processes\\",
+                    "Name": "BackupTool",
+                    "Hour": 2,
+                    "Inputs": [
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\BackUps\\",
+                            "Name": "BackupTool",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        }
+                    ],
+                    "RelativeDayStr": "LBD",
+                    "Frequency": null,
+                    "Continuous": false,
+                    "Language": "Python"
+                },
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Processes\\",
+                    "Name": "NAVACC_files",
+                    "Hour": 3,
+                    "Inputs": [],
+                    "RelativeDayStr": "LBD",
+                    "Frequency": null,
+                    "Continuous": false,
+                    "Language": "Python"
+                },
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Processes\\",
+                    "Name": "SSTXN",
+                    "Hour": 9,
+                    "Inputs": [],
+                    "RelativeDayStr": "LBD",
+                    "Frequency": null,
+                    "Continuous": false,
+                    "Language": "Python"
+                },
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Processes\\",
+                    "Name": "DTDReport",
+                    "Hour": 0,
+                    "Inputs": [
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Bloomberg\\Output\\",
+                            "Name": "Extract_{m}{d}{Y}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Performance Validation\\DTD\\",
+                            "Name": "BBG {m}{d}{Y}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        }
+                    ],
+                    "RelativeDayStr": "LBD",
+                    "Frequency": null,
+                    "Continuous": false,
+                    "Language": "VBA"
+                },
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Smart_Sampling\\",
+                    "Name": "BBGIndices",
+                    "Hour": 4,
+                    "Inputs": [],
+                    "RelativeDayStr": "LBD",
+                    "Frequency": null,
+                    "Continuous": false,
+                    "Language": "VBA"
+                },
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Processes\\",
+                    "Name": "ETF",
+                    "Hour": 0,
+                    "Inputs": [
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\",
+                            "Name": "ETF_SameDay_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "SD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\",
+                            "Name": "ETF_SameDay_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\",
+                            "Name": "Baskets {Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xls",
+                            "Date": "SD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\",
+                            "Name": "Baskets {Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xls",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\",
+                            "Name": "Trade_Blotter_File_{m}{d}{y}",
+                            "SaveTime": null,
+                            "Format": "xls",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\",
+                            "Name": "Trade_Blotter_File_{m}{d}{y}",
+                            "SaveTime": null,
+                            "Format": "xls",
+                            "Date": "PLBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\",
+                            "Name": "PLF {Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "SD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\",
+                            "Name": "PLF {Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        }
+                    ],
+                    "RelativeDayStr": "SD",
+                    "Frequency": null,
+                    "Continuous": false,
+                    "Language": "Python"
+                },
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Processes\\",
+                    "Name": "API",
+                    "Hour": 9,
+                    "Inputs": [],
+                    "RelativeDayStr": "LBD",
+                    "Frequency": null,
+                    "Continuous": false,
+                    "Language": "Python"
+                },
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Processes\\",
+                    "Name": "MVAD",
+                    "Hour": 0,
+                    "Inputs": [
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\RBC\\",
+                            "Name": "RBC_Holding_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\RBC\\",
+                            "Name": "RBC_Holding_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "PLBD"
+                        },
+                        {
+                            "Path": "\\\\entsserver84\\tdrive\\AABOR\\PROD\\FundAdmin\\RBCFA\\Archive\\NAV\\Oversight\\",
+                            "Name": "rbc_portnav_MLOVER_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "txt",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "\\\\entsserver84\\tdrive\\AABOR\\PROD\\FundAdmin\\RBCFA\\Archive\\NAV\\Oversight\\",
+                            "Name": "rbc_portnav_MLOVER_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "txt",
+                            "Date": "PLBD"
+                        },
+                        {
+                            "Path": "\\\\entsserver84\\tdrive\\AABOR\\PROD\\FundAdmin\\SSBFA\\Archive\\NAV\\Oversight\\",
+                            "Name": "SSB_NAV_CANADA_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "txt",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "\\\\entsserver84\\tdrive\\AABOR\\PROD\\FundAdmin\\SSBFA\\Archive\\NAV\\Oversight\\",
+                            "Name": "SSB_NAV_CANADA_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "txt",
+                            "Date": "PLBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\",
+                            "Name": "RBC_Unsett_{d}{m}{y}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        }
+                    ],
+                    "RelativeDayStr": "LBD",
+                    "Frequency": null,
+                    "Continuous": false,
+                    "Language": "Python"
+                },
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Processes\\",
+                    "Name": "Distributions",
+                    "Hour": 0,
+                    "Inputs": [
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\",
+                            "Name": "Dist_IN_SCD_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\AsiaT1\\",
+                            "Name": "Holdings_NA_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "\\\\entsserver84\\tdrive\\AABOR\\PROD\\FundAdmin\\SSBFA\\Archive\\NAV\\Oversight\\",
+                            "Name": "SSB_NAV_CANADA_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "txt",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "\\\\entsserver84\\tdrive\\AABOR\\PROD\\FundAdmin\\RBCFA\\Archive\\NAV\\Oversight\\",
+                            "Name": "rbc_portnav_MLOVER_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "txt",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\RBC\\",
+                            "Name": "RBC_Holding_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        }
+                    ],
+                    "RelativeDayStr": "LBD",
+                    "Frequency": null,
+                    "Continuous": false,
+                    "Language": "Python"
+                },
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Processes\\",
+                    "Name": "UnitRec",
+                    "Hour": 0,
+                    "Inputs": [
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\AsiaT1\\",
+                            "Name": "Units_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "\\\\entsserver84\\tdrive\\AABOR\\PROD\\FundAdmin\\RBCFA\\Archive\\NAV\\Oversight\\",
+                            "Name": "rbc_portnav_MLOVER_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "txt",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "\\\\entsserver84\\tdrive\\AABOR\\PROD\\FundAdmin\\SSBFA\\Archive\\NAV\\Oversight\\",
+                            "Name": "SSB_NAV_CANADA_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "txt",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\CitiLux\\",
+                            "Name": "CitiLux_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\RHB\\",
+                            "Name": "RHB_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\CIMB\\",
+                            "Name": "CIMB_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\DBS\\",
+                            "Name": "DBS_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCB\\",
+                            "Name": "SCB_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\HSBC\\",
+                            "Name": "HSBC_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\HSBC_HK_SG\\",
+                            "Name": "HSBC_HK_SG_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\CITI\\",
+                            "Name": "CITI_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\DEUT\\",
+                            "Name": "DEUT_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\BCA\\",
+                            "Name": "BCA_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\BDAN\\",
+                            "Name": "BDAN_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\BOC\\",
+                            "Name": "BOC_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\RBCHK\\",
+                            "Name": "RBCHK_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\BMAN\\",
+                            "Name": "BMAN_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_Global_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_Indo_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        }
+                    ],
+                    "RelativeDayStr": "LBD",
+                    "Frequency": null,
+                    "Continuous": false,
+                    "Language": "Python"
+                },
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Processes\\",
+                    "Name": "TNARec",
+                    "Hour": 0,
+                    "Inputs": [
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\AsiaT1\\",
+                            "Name": "Units_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "\\\\entsserver84\\tdrive\\AABOR\\PROD\\FundAdmin\\RBCFA\\Archive\\NAV\\Oversight\\",
+                            "Name": "rbc_portnav_MLOVER_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "txt",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "\\\\entsserver84\\tdrive\\AABOR\\PROD\\FundAdmin\\SSBFA\\Archive\\NAV\\Oversight\\",
+                            "Name": "SSB_NAV_CANADA_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "txt",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\CitiLux\\",
+                            "Name": "CitiLux_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\RHB\\",
+                            "Name": "RHB_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\CIMB\\",
+                            "Name": "CIMB_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\DBS\\",
+                            "Name": "DBS_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCB\\",
+                            "Name": "SCB_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\HSBC\\",
+                            "Name": "HSBC_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\HSBC_HK_SG\\",
+                            "Name": "HSBC_HK_SG_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\CITI\\",
+                            "Name": "CITI_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\DEUT\\",
+                            "Name": "DEUT_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\BCA\\",
+                            "Name": "BCA_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\BDAN\\",
+                            "Name": "BDAN_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\BOC\\",
+                            "Name": "BOC_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\RBCHK\\",
+                            "Name": "RBCHK_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\BMAN\\",
+                            "Name": "BMAN_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_Global_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_Indo_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        }
+                    ],
+                    "RelativeDayStr": "LBD",
+                    "Frequency": null,
+                    "Continuous": false,
+                    "Language": "Python"
+                },
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Processes\\",
+                    "Name": "TNARec_Class",
+                    "Hour": 0,
+                    "Inputs": [
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\AsiaT1\\",
+                            "Name": "Units_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "\\\\entsserver84\\tdrive\\AABOR\\PROD\\FundAdmin\\RBCFA\\Archive\\NAV\\Oversight\\",
+                            "Name": "rbc_portnav_MLOVER_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "txt",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "\\\\entsserver84\\tdrive\\AABOR\\PROD\\FundAdmin\\SSBFA\\Archive\\NAV\\Oversight\\",
+                            "Name": "SSB_NAV_CANADA_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "txt",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\CitiLux\\",
+                            "Name": "CitiLux_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\RHB\\",
+                            "Name": "RHB_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\CIMB\\",
+                            "Name": "CIMB_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\DBS\\",
+                            "Name": "DBS_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCB\\",
+                            "Name": "SCB_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\HSBC\\",
+                            "Name": "HSBC_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\HSBC_HK_SG\\",
+                            "Name": "HSBC_HK_SG_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\CITI\\",
+                            "Name": "CITI_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\DEUT\\",
+                            "Name": "DEUT_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\BCA\\",
+                            "Name": "BCA_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\BDAN\\",
+                            "Name": "BDAN_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\BOC\\",
+                            "Name": "BOC_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\RBCHK\\",
+                            "Name": "RBCHK_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\BMAN\\",
+                            "Name": "BMAN_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_Global_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_Indo_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        }
+                    ],
+                    "RelativeDayStr": "LBD",
+                    "Frequency": null,
+                    "Continuous": false,
+                    "Language": "Python"
+                },
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Processes\\",
+                    "Name": "UnitRec_Country",
+                    "Hour": 0,
+                    "Inputs": [
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\AsiaT1\\",
+                            "Name": "Units_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "\\\\entsserver84\\tdrive\\AABOR\\PROD\\FundAdmin\\RBCFA\\Archive\\NAV\\Oversight\\",
+                            "Name": "rbc_portnav_MLOVER_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "txt",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "\\\\entsserver84\\tdrive\\AABOR\\PROD\\FundAdmin\\SSBFA\\Archive\\NAV\\Oversight\\",
+                            "Name": "SSB_NAV_CANADA_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "txt",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\CitiLux\\",
+                            "Name": "CitiLux_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\RHB\\",
+                            "Name": "RHB_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\CIMB\\",
+                            "Name": "CIMB_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\DBS\\",
+                            "Name": "DBS_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCB\\",
+                            "Name": "SCB_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\HSBC\\",
+                            "Name": "HSBC_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\HSBC_HK_SG\\",
+                            "Name": "HSBC_HK_SG_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\CITI\\",
+                            "Name": "CITI_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\DEUT\\",
+                            "Name": "DEUT_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\BCA\\",
+                            "Name": "BCA_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\BDAN\\",
+                            "Name": "BDAN_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\BOC\\",
+                            "Name": "BOC_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\RBCHK\\",
+                            "Name": "RBCHK_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\BMAN\\",
+                            "Name": "BMAN_NAV_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_Global_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_Indo_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        }
+                    ],
+                    "RelativeDayStr": "LBD",
+                    "Frequency": null,
+                    "Continuous": false,
+                    "Language": "Python"
+                },
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Processes\\",
+                    "Name": "DTD",
+                    "Hour": 0,
+                    "Inputs": [
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\",
+                            "Name": "ETF_SameDay_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\",
+                            "Name": "ETF_SameDay_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "PLBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\RBC\\",
+                            "Name": "RBC_Holding_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\RBC\\",
+                            "Name": "RBC_Holding_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "PLBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\",
+                            "Name": "bpl_price_master_{Y}-{m}-{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\",
+                            "Name": "bpl_price_master_{Y}-{m}-{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "PLBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_Global_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_Global_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "PLBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\AsiaT1\\",
+                            "Name": "Holdings_NA_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\AsiaT1\\",
+                            "Name": "Holdings_NA_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "PLBD"
+                        }
+                    ],
+                    "RelativeDayStr": "LBD",
+                    "Frequency": null,
+                    "Continuous": false,
+                    "Language": "Python"
+                },
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Processes\\",
+                    "Name": "DTD_AsiaT1",
+                    "Hour": 0,
+                    "Inputs": [
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\",
+                            "Name": "bpl_price_master_{Y}-{m}-{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\",
+                            "Name": "bpl_price_master_{Y}-{m}-{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "PLBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_Global_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_Global_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "PLBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_CWFA_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_CWFA_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "PLBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_Indo_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_Indo_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "PLBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\AsiaT1\\",
+                            "Name": "Holdings_NA_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\AsiaT1\\",
+                            "Name": "Holdings_NA_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "PLBD"
+                        }
+                    ],
+                    "RelativeDayStr": "LBD",
+                    "Frequency": null,
+                    "Continuous": false,
+                    "Language": "Python"
+                },
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Processes\\",
+                    "Name": "DTDReport_AsiaT1",
+                    "Hour": 0,
+                    "Inputs": [
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Bloomberg\\Output\\",
+                            "Name": "Extract_AsiaT1_{m}{d}{Y}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Performance Validation\\DTD\\",
+                            "Name": "BBG_AsiaT1 {m}{d}{Y}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        }
+                    ],
+                    "RelativeDayStr": "LBD",
+                    "Frequency": null,
+                    "Continuous": false,
+                    "Language": "VBA"
+                },
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Processes\\",
+                    "Name": "FileGrab",
+                    "Hour": 0,
+                    "Inputs": [],
+                    "RelativeDayStr": "SD",
+                    "Frequency": 0.5,
+                    "Continuous": false,
+                    "Language": "Python"
+                },
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Processes\\",
+                    "Name": "FileGrab",
+                    "Hour": 0,
+                    "Inputs": [],
+                    "RelativeDayStr": "PLBD",
+                    "Frequency": 1,
+                    "Continuous": false,
+                    "Language": "Python"
+                },
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Processes\\",
+                    "Name": "dailySignOff_AsiaT1",
+                    "Hour": 0,
+                    "Inputs": [
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\AsiaT1\\",
+                            "Name": "TNA_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\AsiaT1\\",
+                            "Name": "Units_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_Global_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_Indo_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_CWFA_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\AsiaT1\\",
+                            "Name": "SCF_VALID_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\AsiaT1\\",
+                            "Name": "MCF_VALID_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        }
+                    ],
+                    "RelativeDayStr": "LBD",
+                    "Frequency": null,
+                    "Continuous": false,
+                    "Language": "Python"
+                },
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Processes\\",
+                    "Name": "dailySignOff_NA",
+                    "Hour": 0,
+                    "Inputs": [
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\AsiaT1\\",
+                            "Name": "TNA_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\AsiaT1\\",
+                            "Name": "Units_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_Global_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_Indo_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_CWFA_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\AsiaT1\\",
+                            "Name": "SCF_VALID_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\AsiaT1\\",
+                            "Name": "MCF_VALID_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        }
+                    ],
+                    "RelativeDayStr": "LBD",
+                    "Frequency": null,
+                    "Continuous": false,
+                    "Language": "Python"
+                },
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Processes\\",
+                    "Name": "dailySignOff_FOF",
+                    "Hour": 0,
+                    "Inputs": [
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\FOF\\",
+                            "Name": "TNA_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\FOF\\",
+                            "Name": "Units_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_Global_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_Indo_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_CWFA_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\FOF\\",
+                            "Name": "SCF_VALID_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\FOF\\",
+                            "Name": "MCF_VALID_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "LBD"
+                        }
+                    ],
+                    "RelativeDayStr": "LBD",
+                    "Frequency": null,
+                    "Continuous": false,
+                    "Language": "Python"
+                },
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Processes\\",
+                    "Name": "dailySignOff_AsiaT",
+                    "Hour": 0,
+                    "Inputs": [
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\AsiaT\\",
+                            "Name": "TNA_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "SD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\AsiaT\\",
+                            "Name": "Units_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "SD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "FX_Indo_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "xlsx",
+                            "Date": "SD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\AsiaT\\",
+                            "Name": "SCF_VALID_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "SD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\AsiaT\\",
+                            "Name": "MCF_VALID_{Y}{m}{d}",
+                            "SaveTime": null,
+                            "Format": "csv",
+                            "Date": "SD"
+                        },
+                        {
+                            "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Daily\\{Y}\\{Y}{m}\\{Y}{m}{d}\\Inputs\\SCD\\",
+                            "Name": "completness",
+                            "SaveTime": null,
+                            "Format": "txt",
+                            "Date": "SD"
+                        }
+                    ],
+                    "RelativeDayStr": "SD",
+                    "Frequency": null,
+                    "Continuous": false,
+                    "Language": "Python"
+                },
+                {
+                    "Path": "Z:\\Fund_Oversight\\OVERSIGHT\\Operations\\Tools\\Processes\\",
+                    "Name": "dailySignOff_Vietnam",
+                    "Hour": 25,
+                    "Inputs": [],
+                    "RelativeDayStr": "SD",
+                    "Frequency": null,
+                    "Continuous": false,
+                    "Language": "Python"
+                }
+            ]
+        }
+    ]
+}
