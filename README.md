@@ -2,7 +2,7 @@
 
 System to help manage high volume of operations
  
-The purpose is to manage independent processes running on a local machine (current security constraints
+It is designed to manage processes on a local machine (current security constraints
 doesn't allow a server hosted system).
 
 The scheduler keeps a log of it's activity and can be interracted with through a GUI. Objective is 
